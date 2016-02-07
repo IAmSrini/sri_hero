@@ -18,7 +18,7 @@
   </thead>
 
   <tbody>
-    <% Hero.order('day').first(19).each do |hero| %>
+    <% Hero.order('day').first(16).each do |hero| %>
       <tr>
         <td><%= hero.day %></td>
         <td><%= hero.User.name %></td>
