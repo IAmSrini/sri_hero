@@ -1,0 +1,20 @@
+<h3> If you have already selected the person to swap with, click on "New Schedule" to view New Schedule<br> Else, click on "Swap with" </br> </h3>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Day you swapped to:</strong>
+  <%= @hero.day %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @hero.User.name %>
+</p>
+
+
+
+
+<%= link_to 'Re- select date', edit_hero_path(@hero) %> 
+<%= link_to 'Swap with', heros_path %>
+<%= link_to 'New Schedule', pay_schedule_path %>

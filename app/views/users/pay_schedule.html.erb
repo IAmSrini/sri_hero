@@ -1,0 +1,32 @@
+<style> 
+	body {
+			background-image: url("1.jpg");
+			background-repeat: no-repeat;
+			background-position: center right; 
+			background-size: 400px 350px;
+		 }
+</style>
+
+<h2> <%= Date.today.strftime("%Y - %m") %> month's Schedule for all the Employees </h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>User</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% Hero.order('day').first(19).each do |hero| %>
+      <tr>
+        <td><%= hero.day %></td>
+        <td><%= hero.User.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h3> Note: On the days you are not Support Hero, you are Report Hero (implies your presence is needed ":)") </h3>
+
+<%= link_to 'Back to Home Page', users_path %>

@@ -1,0 +1,27 @@
+<h1>Editing Support Hero Schedule</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back to Home Page', users_path %>
+
+<h3> Use the information below to select a swap date </h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>User</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @heros.each do |hero| %>
+      <tr>
+        <td><%= hero.day %></td>
+        <td><%= hero.User.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

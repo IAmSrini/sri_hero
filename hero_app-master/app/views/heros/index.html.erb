@@ -1,0 +1,25 @@
+<h1>Select "Swap with" for the user who is a support hero on the date you swapped to</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @heros.each do |hero| %>
+      <tr>
+        <td><%= hero.day %></td>
+        <td><%= hero.User.name %></td>
+        <td><%= link_to 'Swap with', edit_hero_path(hero) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Back to Home Page', users_path %>
