@@ -19,7 +19,17 @@ Rails.application.routes.draw do
   get 'display_page_in_hero' => 'heros#display_page_in_hero'
   get 'new_edit' => 'heros#new_edit'
   post 'new_edit' => 'heros#new_edit'
-
+  get 'fullyear' => 'users#fullyear'
+  get 'march' => 'users#march'
+  get 'april' => 'users#april'
+  get 'may' => 'users#may'
+  get 'june' => 'users#june'
+  get 'july' => 'users#july'
+  get 'august' => 'users#august'
+  get 'september' => 'users#september'
+  get 'october' => 'users#october'
+  get 'november' => 'users#november'
+  get 'december' => 'users#december'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

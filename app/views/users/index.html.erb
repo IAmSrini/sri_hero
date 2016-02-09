@@ -15,7 +15,7 @@
 <br><br>
 
 <h3> Our Heroes Family: <br> Sherry, Boris, Vicente, Matte, Kevin, Zoe, Jay, Eadon, 
-				Franky, James, Jack </h3><br>
+				Franky, James, Luis, Jack </h3><br>
 
 <h3> Enter your Name in below to view your schedule </h3>
 <%= form_for @user, :url => {:action => "display_page", :name => :name}, :html => {:method => :get} do |f| %>
@@ -24,4 +24,4 @@
   <%= f.submit "View My Schedule" %>
 <% end %>
 <br><br><br><br><br>
-<%= link_to 'Current Month Schedule', pay_schedule_path %>
+<%= link_to '2016 Full Schedule', fullyear_path %>

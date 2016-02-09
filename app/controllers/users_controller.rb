@@ -27,8 +27,8 @@ class UsersController < ApplicationController
   def display_page
 	@user = User.new(name: params[:user][:name])
 	hash = Hash.new
-	hash = {"Boris" =>1, "Vicente" => 2, "Matte" => 3, "Jack" => 4, "Sherry" => 5, "Kevin" =>6, "Zoe" => 7, 
-				"Eadon" => 8, "Franky" =>9, "Jay" => 10, "James" => 11}
+	hash = {"Sherry" => 1, "Boris" =>2, "Vicente" => 3, "Matte" => 4, "Jack" => 5,  "Kevin" =>6, "Zoe" => 7, "Jay" => 8,
+				"Eadon" => 9, "Franky" => 10,  "Luis" => 11, "James" => 12}
 	 hash.each do |key, value|
 	 if key == @user.name
 		@uservalue = value
@@ -37,9 +37,38 @@ class UsersController < ApplicationController
   end
   
   def pay_schedule
-	 # 0.upto((User.length)-1) do |ele|
-		# @year,@month,@week = day_date[ele].split(/-/)
-	 # end
+	 @heros = Hero.where("day >= '2016-02-01' AND day <= '2016-02-31'")
+  end
+  
+  def march
+	@heros = Hero.where("day >= '2016-03-01' AND day <= '2016-03-31'")
+  end
+  def april
+	@heros = Hero.where("day >= '2016-04-01' AND day <= '2016-04-31'")
+  end
+  def may
+	@heros = Hero.where("day >= '2016-05-01' AND day <= '2016-05-31'")
+  end
+  def june
+	@heros = Hero.where("day >= '2016-06-01' AND day <= '2016-06-31'")
+  end
+  def july
+	@heros = Hero.where("day >= '2016-07-01' AND day <= '2016-07-31'")
+  end
+  def august
+	@heros = Hero.where("day >= '2016-08-01' AND day <= '2016-08-31'")
+  end
+  def september
+	@heros = Hero.where("day >= '2016-09-01' AND day <= '2016-09-31'")
+  end
+  def october
+	@heros = Hero.where("day >= '2016-10-01' AND day <= '2016-10-31'")
+  end
+  def november
+	@heros = Hero.where("day >= '2016-11-01' AND day <= '2016-11-31'")
+  end
+  def december
+	@heros = Hero.where("day >= '2016-12-01' AND day <= '2016-12-31'")
   end
   ######===============================================######
 
