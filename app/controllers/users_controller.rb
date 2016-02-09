@@ -37,20 +37,20 @@ class UsersController < ApplicationController
   end
   
   def pay_schedule
-	 @heros = Hero.where("day >= '2016-02-01' AND day <= '2016-02-31'")
+	 @heros = Hero.where("day >= '2016-02-01' AND day <= '2016-02-29'")
   end
   
   def march
 	@heros = Hero.where("day >= '2016-03-01' AND day <= '2016-03-31'")
   end
   def april
-	@heros = Hero.where("day >= '2016-04-01' AND day <= '2016-04-31'")
+	@heros = Hero.where("day >= '2016-04-01' AND day <= '2016-04-30'")
   end
   def may
 	@heros = Hero.where("day >= '2016-05-01' AND day <= '2016-05-31'")
   end
   def june
-	@heros = Hero.where("day >= '2016-06-01' AND day <= '2016-06-31'")
+	@heros = Hero.where("day >= '2016-06-01' AND day <= '2016-06-30'")
   end
   def july
 	@heros = Hero.where("day >= '2016-07-01' AND day <= '2016-07-31'")
@@ -59,13 +59,13 @@ class UsersController < ApplicationController
 	@heros = Hero.where("day >= '2016-08-01' AND day <= '2016-08-31'")
   end
   def september
-	@heros = Hero.where("day >= '2016-09-01' AND day <= '2016-09-31'")
+	@heros = Hero.where("day >= '2016-09-01' AND day <= '2016-09-30'")
   end
   def october
 	@heros = Hero.where("day >= '2016-10-01' AND day <= '2016-10-31'")
   end
   def november
-	@heros = Hero.where("day >= '2016-11-01' AND day <= '2016-11-31'")
+	@heros = Hero.where("day >= '2016-11-01' AND day <= '2016-11-30'")
   end
   def december
 	@heros = Hero.where("day >= '2016-12-01' AND day <= '2016-12-31'")
